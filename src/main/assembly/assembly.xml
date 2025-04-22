@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>task-tracker-cli-jar</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory> <!-- Remove leading slash for Windows compatibility -->
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+    <files>
+        <!-- Include your task-cli.bat or other necessary resources -->
+        <file>
+            <source>src/main/resources/task-cli.bat</source>
+            <outputDirectory>task-cli.bat</outputDirectory> <!-- Remove leading slash here as well -->
+        </file>
+    </files>
+</assembly>
